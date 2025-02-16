@@ -1,0 +1,26 @@
+#include<stdio.h>
+
+int main() 
+{
+    int a, b;
+    int ucln, bcnn;
+    scanf("%d %d", &a, &b);
+    if (b > a) {
+        int c = a;
+        a = b;
+        b = c;
+    }
+    
+    for (int i = b; i >= 1; i--) {
+        if ((a%i == 0) && (b%i == 0)) {
+            ucln = i;
+            break;
+        }
+        
+    }    
+    
+    bcnn = a*b/ucln;
+    printf("%d\n", ucln);
+    printf("%d", bcnn);
+    return 0;
+}
