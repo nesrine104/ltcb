@@ -1,0 +1,28 @@
+#include <stdlib.h>
+#include<math.h>
+
+int main()
+{
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+
+    if (a==0&&b==0&&c!=0)
+        printf("Phuong trinh vo nghiem");
+
+    if (a==0&&b==0&&c==0)
+        printf("phuong trinh vo so nghiem");
+
+    if (a == 0)
+        printf("Nghiem cua phuong trinh la: %f", -(float)c/b);
+    if (a!=0) {
+        float del = b*b - 4*a*c;
+        if (del<0)
+            printf("phuong trinh vo nghiem");
+        else if (del == 0)
+            printf("phuong trinh co nghiem kep: %f", -(float)b/(2*a));
+        else printf("phuong trinh co 2 nghiem: %f va %f", (-b+sqrt(del))/(2*a), (-b-sqrt(del))/(2*a));
+
+    }
+
+    return 0;
+}
