@@ -1,0 +1,30 @@
+#include<stdio.h>
+
+int main()
+{
+    int m, y;
+    scanf("%d %d", &m, &y);
+    switch (m)
+    {
+        case 1: printf("Thang 1 nam %d co 31 ngay", y); break;
+        case 2: {
+            if (y%4 == 0) printf ("Thang 2 nam %d co 29 ngay", y);
+            else printf ("Thang 2 nam %d co 28 ngay", y);
+        }
+        break;
+        case 3: printf("Thang 3 nam %d co 31 ngay", y); break;
+        case 4: printf("thang 4 nam %d co 30 ngay", y); break;
+        case 5: printf("thang 5 nam %d co 31 ngay", y); break;
+        case 6: printf("thang 6 nam %d co 30 ngay", y); break;
+        case 7: printf("thang 7 nam %d co 31 ngay", y); break;
+        case 8: printf("thang 8 nam %d co 31 ngay", y); break;
+        case 9: printf("thang 9 nam %d co 30 ngay", y); break;
+        case 10: printf("thang 10 nam %d co 31 ngay", y); break;
+        case 11: printf("thang 11 nam %d co 30 ngay", y); break;
+        case 12: printf("thang 12 nam %d co 31 ngay", y); break;
+        default: printf("khong co thang nay"); break;
+        
+    }
+    return 0;
+
+}
