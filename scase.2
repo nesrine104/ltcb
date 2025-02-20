@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+int main()
+{
+    printf("CAC CHUC NANG CUA CHUONG TRINH\n");
+    printf("1. LOI CHAO\n");
+    printf("2. GIOI THIEU BAN THAN\n");
+    printf("3. LOI CHUC NAM MOI\n");
+    printf("4. KET THUC!\n");
+    printf("Moi ban nhap lua chon: ");
+    int a;
+    scanf("%d", &a);
+    switch(a)
+    {
+        case 1: printf("Xin chao cac ban den voi chuong trinh cua toi"); break;
+        case 2: printf("Toi la Ngoc"); break;
+        case 3: printf("Happy new year"); break;
+        case 4: exit(1);
+        default: printf("\nBan da nhap sai lua chon\n"); break;
+    }
+    return 0;
+
+}
