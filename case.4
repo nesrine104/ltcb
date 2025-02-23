@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+int main()
+{
+    float a, b;
+    char c;
+    
+    printf("Nhap toan hang thu nhat: ");
+    scanf("%f", &a);
+    getchar(); //xoa ki tu newline (\n) con sot lai, tranh nham voi ki tu c
+    printf("Nhap toan tu: ");
+    scanf("%c", &c);
+    printf("Nhap toan hang thu hai: ");
+    scanf("%f", &b);
+    switch(c)
+    {
+        case '+': printf("%f + %f = %f", a, b, a+b); break;
+        case '-': printf("%f - %f = %f", a, b, a-b); break;
+        case '*': printf("%f * %f = %f", a, b, a*b); break;
+        case '/': printf("%f / %f = %f", a, b, a/b); break;
+        default: printf("khong the thuc hien"); break;
+    }
+    return 0;
+}
