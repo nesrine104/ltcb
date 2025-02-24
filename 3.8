@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int n;
+    printf("Nhap so nguyen: ");
+    scanf("%d", &n);
+    int t=1;
+    for (int i=1; i<=n; i++) {
+        t*=i;
+    }
+    printf("%d!=%d", n, t);
+    return 0;
+}
