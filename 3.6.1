@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a, b;
+    printf("Nhap vao 2 so: ");
+    scanf("%d %d", &a, &b);
+    int x = a, y=b;
+    
+    while(a!=b) {
+        if(a<b) {
+        int c = a;
+        a=b;
+        b=c;
+        }
+        a=a-b;
+    }
+    printf("ucln la: %d\n", a);
+    printf("bcnn la: %d", x*y/a);
+    return 0;
+}
