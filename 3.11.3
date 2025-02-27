@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main() 
+{
+    int n, i;
+    int a[100];
+    printf("Nhap vao so nguyen duong n: ");
+    scanf("%d", &n);
+    int x=n;
+    for (i=0; x>0; i++) {
+        a[i] = x%16;
+        x/=16;
+    }
+    printf("n bieu dien duoi dnag co so 16 la:");
+    for (i=i-1; i>=0; i--) {
+        printf("%d", a[i]);
+        
+    }
+    return 0;
+}
