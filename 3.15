@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a, n;
+    printf("Nhap vao so tien: ");
+    scanf("%d", &a);
+    printf("nhap vao so thang: ");
+    scanf("%d", &n);
+    float total=a*pow(0.45/100, n);
+    printf("So tien nhan duoc la: %f", a+total);
+    return 0;
+}
