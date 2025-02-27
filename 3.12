@@ -3,14 +3,14 @@
 
 int main()
 {
-    int x;
+    float x;
     float esp;
     printf("nhap x: ");
-    scanf("%d",&x);
+    scanf("%f",&x);
     printf("nhap do chinh xac: ");
     scanf("%f", &esp);
     int i, k;
-    float sin, n;
+    float s=0, n;
     do 
     {
         int k =1;
@@ -18,10 +18,10 @@ int main()
             k*=j;
         }
         n = (float)pow(-1, i)*pow(x, 2*i+1)/k;
-        sin+=n;
+        s+=n;
         i++;
     }
     while (fabs(n)>esp);
-    printf("sin(%d)=%f", x, sin);
+    printf("sin(%.1f)=%f", x, s);
     return 0;
 }
