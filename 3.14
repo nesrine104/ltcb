@@ -1,0 +1,18 @@
+#include<stdio.h>
+
+int main()
+{
+    printf("\tNam\t\tGDP\n");
+    int n=2014;
+    int g;
+    printf("\t%d\t\t", n);
+    scanf("%d", &g);
+    int x = g;
+    do {
+        n++;
+        printf("\t%d\t\t", n);
+        scanf("%d", &g);
+    }
+    while (g<2*x);
+    return 0;
+}
