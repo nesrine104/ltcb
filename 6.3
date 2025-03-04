@@ -25,7 +25,9 @@ int main()
     printf("Tong cac so am bang: %d\n", sa);
     printf("Tong cac so duong bang: %d\n", sd);
     printf("Trung binh cong bang: %f\n", (float)s/n);
-    printf("Trung binh so am bang: %f\n", (float)sa/da);
-    printf("Trung binh so duong bang: %f", (float)sd/dd);
+    if (da!=0)
+        printf("Trung binh so am bang: %f\n", (float)sa/da);
+    if (dd!=0)
+        printf("Trung binh so duong bang: %f", (float)sd/dd);
     return 0;
 }
