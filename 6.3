@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main()
+{
+    int arr[100];
+    int n;
+    int s=0, sa=0, sd=0;
+    int dd=0, da=0;
+    printf("Nhap so phan tu cua day: ");
+    scanf("%d", &n);
+    for(int i=0; i<n; i++) {
+        printf("a[%d]=", i);
+        scanf("%d", &arr[i]);
+        s+=arr[i];
+        if (arr[i]>=0) {
+            sd+=arr[i];
+            dd++;
+        }
+        else {
+            sa+=arr[i];
+            da++;
+        }
+    }
+    printf("Tong bang: %d\n", s);
+    printf("Tong cac so am bang: %d\n", sa);
+    printf("Tong cac so duong bang: %d\n", sd);
+    printf("Trung binh cong bang: %f\n", (float)s/n);
+    printf("Trung binh so am bang: %f\n", (float)sa/da);
+    printf("Trung binh so duong bang: %f", (float)sd/dd);
+    return 0;
+}
