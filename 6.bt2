@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int arr[100];
+    int n, m;
+    int d=1;
+    printf("Nhap so phan tu: ");
+    scanf("%d", &n);
+    printf("Nhap so can tim: ");
+    scanf("%d", &m);
+    
+    for(int i=0; i<n; i++) {
+        printf("a[%d]=", i);
+        scanf("%d", &arr[i]);
+    }
+    for(int i=0; i<n; i++) {
+        if (arr[i]==m) {
+            printf("So can tim la: a[%d]", i);
+            d=0;
+        }
+    }
+    if(d==1) printf("Khong co");
+    return 0;
+}
