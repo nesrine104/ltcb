@@ -1,0 +1,63 @@
+#include<stdio.h>
+
+int main() 
+{
+    int m,n, td=0, ta=0;
+    int a[100][100];
+    int temp;
+
+    printf("Nhap so hang: ");
+    scanf("%d", &m);
+    printf("Nhap so cot: ");
+    scanf("%d", &n);
+    for (int i=0; i<m;i++) {
+        for (int j=0; j<n; j++) {
+            printf("a[%d][%d]= ", i, j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    printf("Mang la:\n");
+    for (int i=0; i<m; i++){
+        for (int j=0; j<n;j++) {
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+    for (int i=0; i<m; i++){
+        for (int j=0; j<n; j++) {
+            for (int k=j+1; k<n; k++) {
+                if (a[i][j]>=a[i][k]) {
+                    temp=a[i][j];
+                    a[i][j]=a[i][k];
+                    a[i][k]=temp;
+                }
+            }
+        }
+    }
+    printf("\nMang sap xep tang dan theo hang la:\n");
+    for (int i=0; i<m; i++){
+        for (int j=0; j<n;j++) {
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+    for (int i=0; i<n; i++){
+        for (int j=0; j<m; j++) {
+            for (int k=j+1; k<m; k++) {
+                if (a[j][i]>=a[k][i]) {
+                    temp=a[j][i];
+                    a[j][i]=a[k][i];
+                    a[k][i]=temp;
+                }
+            }
+        }
+    }
+    printf("\nMang sap xep tang dan theo cot la:\n");
+    for (int i=0; i<m; i++){
+        for (int j=0; j<n;j++) {
+            printf("%5d", a[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
