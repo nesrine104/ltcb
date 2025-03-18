@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int LT(int a, int b)
+{
+    int S=1;
+    for (int i=1; i<=b; i++) {
+        S*=a;
+    }
+    return S;
+}
+
+int main()
+{
+    int a, b;
+    printf("Nhap x:"); scanf("%d", &a);
+    printf("Nhap y:"); scanf("%d", &b);
+    printf("Ket qua: %d", LT(a, b));
+    return 0;
+    
+}
