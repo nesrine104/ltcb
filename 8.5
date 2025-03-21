@@ -1,0 +1,40 @@
+#include<stdio.h>
+
+void doics(int n, int a)
+{
+    if (a==2||a==8){
+        if (n<a) printf("%d", n);
+        else {
+            doics(n/a, a);
+            printf("%d", n%a);
+        }
+    }
+    else if(a==16) {
+        if (n<16) {
+            if (n<10) printf("%d", n);
+            else printf("%c", 55+n);
+        }
+        else {
+            doics(n/a, a);
+            int r=n%a;
+            if (r<16) {
+                if (r<10) printf("%d", r);
+                else printf("%c", 55+r);
+            }
+        }
+    }
+    else printf("Khong the doi");
+}
+
+int main()
+{
+    int n, a;
+    int arr[100];
+    printf("Nhap n:");
+    scanf("%d", &n);
+    printf("Nhap co so can doi:"); 
+    scanf("%d", &a);
+    printf("Ket qua la: ");
+    doics(n, a);
+    return 0;
+}
