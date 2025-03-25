@@ -1,0 +1,47 @@
+#include<stdio.h>
+
+void doics2(int n)
+{
+    if (n<2) printf("%d", n);
+    else {
+        doics2(n/2);
+        printf("%d", n%2);
+    }
+}
+void doics8(int n)
+{
+    if (n<8) printf("%d", n);
+    else {
+        doics8(n/8);
+        printf("%d", n%8);
+    }
+}
+void doics16(int n)
+{
+    if (n<16) {
+        if (n<10) printf("%d", n);
+        else printf("%c", 55+n);
+    }
+    else {
+        doics16(n/16);
+        int r=n%16;
+        if (r<16) {
+            if (r<10) printf("%d", r);
+        else printf("%c", 55+r);
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    printf("Nhap n:");
+    scanf("%d", &n);
+    printf("Chuyen ve co so 2: ");
+    doics2(n);
+    printf("\nChuyen ve co so 8: ");
+    doics8(n);
+    printf("\nChuyen ve co so 16: ");
+    doics16(n);
+    return 0;
+}
