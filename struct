@@ -1,0 +1,52 @@
+#include<stdio.h>
+
+typedef struct
+{
+    char masv[8];
+    char name[30];
+    float toan;
+    float van;
+    float tb;
+} sv;
+
+void nhap(sv *x)
+{
+    printf("Nhap ma sv: "); fflush(stdin); scanf("%s", &x->masv);
+    getchar();
+    printf("Nhap ten: "); fflush(stdin); gets(x->name);
+    printf("Nhap diem toan:"); scanf("%f", &x->toan);
+    printf("Nhap diem van:"); scanf("%f", &x->van);
+    x->tb=(x->toan+x->van)/2;
+}
+void nhapds(sv a[], int n)
+{
+    for(int i=0; i<n; i++) {
+        printf("Nhap thong tin sinh vien thu %d:\n", i+1);
+        nhap(&a[i]);
+    }
+}
+void xuat(sv *x)
+{
+    printf("Ma sinh vien: %s\n", x->masv);
+    printf("Ho ten: %s\n", x->name);
+    printf("Diem trung binh: %.2f\n", x->tb);
+    printf("\n");
+}
+void xuatds(sv a[], int n)
+{
+    for(int i=0; i<n; i++) {
+        printf("Thong tin sinh vien thu %d la:\n", i+1);
+        xuat(&a[i]);
+    }
+}
+int main()
+{
+    sv a[100];
+    int n;
+    printf("Nhap so sinh vien: ");
+    scanf("%d", &n);
+    getchar;
+    nhapds(a, n);
+    xuatds(a, n);
+    return 0;
+}
