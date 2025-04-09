@@ -1,0 +1,11 @@
+#include<stdio.h>
+
+int main()
+{
+    FILE *fp;
+    fp=fopen("text1.txt", "w");
+    char s[]="xinchao";
+    fprintf(fp, "%5d %.2f %s", 100, 3.14, s);
+    fclose(fp);
+    return 0;
+}
