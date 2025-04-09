@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void ghi(FILE *fp, char Name[20], char arrname) 
+{
+    int m, n, i, j;
+    int a[100][100];
+    fp=fopen(Name, "a");
+    fprintf(fp, "Ma tran %c\n", arrname);
+    printf("Nhap so hang ma tran: "); scanf("%d", &m);
+    printf("Nhap so cot ma tran: "); scanf("%d", &n);
+    fprintf(fp, "%5d%5d\n", m, n);
+    for(int i=0; i<m; i++){
+        for(int j=0; j<n; j++) {
+            printf("%c[%d][%d]=", arrname, i, j);
+            scanf("%d", &a[i][j]);
+            fprintf(fp, "%5d", a[i][j]);
+        }
+        fprintf(fp, "\n");
+    }
+    fclose(fp);
+}
+
+int main()
+{
+    FILE *fp;
+    ghi(fp, "text3.txt", 'a');
+    
+    return 0;
+}
