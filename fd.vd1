@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    FILE *fp;
+    int x;
+    float y;
+    char s[100];
+    fp=fopen("text.1", "r");
+    if (fp==NULL) printf("Cannot open file");
+    else {
+        fscanf(fp, "%d%f", &x, &y);
+        fgets(s, 100, fp);
+        printf("\nKet qua doc file\n");
+        printf("x=%d\n", x);
+        printf("y=%.2f\n", y);
+        printf("s=%s", s);
+        fclose(fp);
+    }
+    return 0;
+}
