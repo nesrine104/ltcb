@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+#define pi 3.14
+
+int main()
+{
+    int r;
+    printf("Nhap ban kinh hinh cau: ");
+    scanf("%d", &r);
+    printf("Dien tich hinh cau la: %.2f\n", 4*pi*pow(r, 2));
+    printf("The tich hinh cau la: %.2f", pi*4/3*pow(r, 3));
+    return 0;
+}
