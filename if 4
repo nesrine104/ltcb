@@ -1,0 +1,39 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+char* check(int a, int b, int c)
+{
+    if(a>b+c||a==b+c) return("Day khong la 3 canh cua tam giac");
+    else {
+        if(pow(a, 2)==pow(b, 2)+pow(c, 2)) {
+            if(b==c) return("Day la tam giac vuong can\n");
+            else return("Day la tam giac vuong\n");
+        }
+        else {
+            if(a==b&&b==c) return("Day la tam giac deu\n");
+            else if(a==b||b==c||a==c) return("Day la tam giac can\n");
+            else return("Day la tam giac thuong");
+        }
+    }
+}
+
+int main()
+{
+    int a, b, c;
+    int tmp;
+    printf("Nhap do dai 3 canh: ");
+    scanf("%d%d%d", &a, &b, &c);
+    if(a<b&&b<c) {
+        tmp=a; 
+        a=c;
+        c=tmp;
+    }
+    if(a<c&&c<b) {
+        tmp=a;
+        a=b;
+        b=tmp;
+    }
+    printf("%s", check(a, b, c));
+    return 0;
+}
