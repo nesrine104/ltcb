@@ -1,0 +1,15 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+{
+    int a,b;
+    printf("Nhap 2 so nguyen: ");
+    scanf("%d%d", &a, &b);
+    printf("Tong hai so: %d\n", a+b);
+    printf("Hieu hai so: %d\n", a-b);
+    printf("Tich hai so: %d\n", a*b);
+    printf("Thuong hai so: %.2f\n", (float)a/b);
+    return 0;
+}
