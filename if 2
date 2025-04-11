@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+    int a1, b1, c1, a2, b2, c2;
+    printf("Nhap he so phuong trinh 1: ");
+    scanf("%d%d%d", &a1, &b1, &c1);
+    printf("Nhap he so phuong trinh 2: ");
+    scanf("%d%d%d", &a2, &b2, &c2);
+    int d, dx, dy;
+    d=a1*b2-a2*b1;
+    dx=c1*b2-c2*b1;
+    dy=a1*c2-c1*a2;
+    if(d!=0) {
+        printf("Nghiem cua phuong trinh la:%d %d", dx/d, dy/d);
+    }
+    else if(dx==0||dy==0) printf("He vo nghiem");
+    else printf("He vo so nghiem");
+    
+    return 0;
+}
