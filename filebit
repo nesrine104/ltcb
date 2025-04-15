@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    double x=23.31, x1;
+    int y=13, y1;
+    char s[10]="Xin chao", s1[20];
+    fp=fopen("File1", "wb+");
+    if(fp==NULL) printf("Cannot open file");
+    else {
+        fwrite(&x, sizeof(double), 1, fp);
+        fwrite(&y, sizeof(int), 1, fp);
+        fwrite(&s, sizeof(char), 10, fp);
+        rewind(fp);
+        fread(&x1, sizeof(double), 1, fp);
+        fread(&y1, sizeof(int), 1, fp);
+        fread(&s1, sizeof(char), 20, fp);
+        printf("x1=%5.2f, y1=%d, s1=%s", x1, y1, s1);
+        fclose(fp);
+    }
+    return 0;
+}
