@@ -1,0 +1,29 @@
+#include<stdio.h>
+
+int main()
+{
+    int n, a[100];
+    int check;
+    printf("Nhap so phan tu: "); 
+    scanf("%d", &n);
+    for(int i=0; i<n; i++) {
+        printf("Nhap phan tu %d: ", i+1);
+        scanf("%d", &a[i]);
+    }
+    for(int i=0; i<n; i++) {
+        check=0;
+        for(int j=i-1; j>=0; j--) {
+            if(a[i]==a[j]) 
+                check=1;
+        }
+        if(check==0) {
+            int dem=1;
+            for(int j=i+1; j<n; j++) {
+                if(a[j]==a[i])
+                    dem++;
+            }
+            printf("Phan tu %d xuat hien %d lan\n", a[i], dem);
+        }
+    }
+    return 0;
+}
