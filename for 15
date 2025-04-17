@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a, n;
+    printf("Nhap so tien gui: ");
+    scanf("%d", &a);
+    printf("Nhap so thang gui tien: ");
+    scanf("%d", &n);
+    printf("So tien nhan duoc sau %d thang la: %f", n, (float)(a*pow((1+0.0045), n)));
+    return 0;
+}
