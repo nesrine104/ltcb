@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    int nam=2015;
+    int a[100], i=0;
+    int gdp1;
+    int gdp;
+    printf("Nhap gdp nam 2014: ");
+    scanf("%d", &gdp1);
+    while(gdp!=2*gdp1) {
+        printf("Nhap GDP nam %d: ", nam);
+        nam++;
+        scanf("%d", &gdp);
+        a[i]=gdp;
+        i++;
+    }
+    printf("%-10s%-10s\n", "Nam", "GDP");
+    printf("%-10d%-10d\n", 2014, gdp1);
+    for(int j=0; j<i; j++) {
+        printf("%-10d%-10d\n", 2014+j+1, a[j]);
+    }
+    return 0;
+}
