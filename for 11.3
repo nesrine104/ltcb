@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    int a[100];
+    printf("Nhap so nguyen: ");
+    scanf("%d", &n);
+    int i=0;
+    printf("Co so 16: ");
+    if(n<16) {
+        if(n<10) printf ("%d", n);
+        else printf("%c", 55+n);
+    }
+    else {
+        while(n!=0) {
+            a[i]=n%16;
+            n/=16;
+            i++;
+        }
+        for(int j=i-1; j>=0; j--) {
+            if(a[j]<10) printf("%d", a[j]);
+            else printf("%c", a[j]+55);
+        }
+    }
+    return 0;
+}
