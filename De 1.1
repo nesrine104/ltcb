@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int n, a[100];
+    int b, cnt=0;
+    printf("Nhap so so nguyen: ");
+    scanf("%d", &n);
+    printf("Nhap cac phan tu cua day: ");
+    for(int i=0; i<n; i++) {
+        scanf("%d", &a[i]);
+    }
+    printf("Nhap so can tim: ");
+    scanf("%d", &b);
+    for(int i=0; i<n; i++) {
+        if(a[i]==b) 
+            cnt++;
+    }
+    printf("So %d xuat hien %d lan", b, cnt);
+    return 0;
+}
