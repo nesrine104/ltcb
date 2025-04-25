@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+
+int main()
+{
+    int n;
+    printf("Nhap so nguyen: ");
+    scanf("%d", &n);
+    printf("Cac so chinh phuong nho hon %d la: ", n);
+    for(int i=1; i<n; i++){
+        if(sqrt(i)*sqrt(i)==i)
+            printf("%d ", i);
+    }
+    return 0;
+}
